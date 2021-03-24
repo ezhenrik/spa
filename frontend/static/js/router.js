@@ -27,6 +27,16 @@ const router = async () => {
         { path: "/settings", view: Settings }
     ];
 
+
+    if (location.pathname == '/') {
+        const view = new Dashboard
+        document.querySelector("#app").innerHTML = await view.getHtml();
+        return
+    }
+    
+    
+    
+
     // Test each route for potential match
     const potentialMatches = routes.map(route => {
         return {
@@ -45,6 +55,8 @@ const router = async () => {
     }
 
     const view = new match.route.view(getParams(match));
+
+    
 
     document.querySelector("#app").innerHTML = await view.getHtml();
 };
