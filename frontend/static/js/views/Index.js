@@ -11,7 +11,7 @@ export default class extends AbstractView {
         return `
             <h1>App</h1>
             <p>
-               App is this
+               App is test
             </p>
         `;
     }
