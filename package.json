@@ -1,5 +1,5 @@
 {
-  "name": "spa",
+  "name": "Code",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "haunted": "^4.7.1",
+    "simple-wc-router": "^2.3.4"
   }
 }
