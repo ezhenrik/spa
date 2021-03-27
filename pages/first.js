@@ -3,11 +3,11 @@ import { LitElement, html } from 'lit-element';
 class First extends LitElement {
     render() {
         return html`
-            <span>moi</span>
+            <span>first</span>
         `
     }
     createRenderRoot() {
         return this;
     }
 }
-customElements.define('first-page', First);
+customElements.define('page-first', First);

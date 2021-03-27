@@ -1,6 +1,6 @@
 import { LitElement, html } from 'lit-element';
 import { Router } from 'simple-wc-router';
-import './pages/page_home.js';
+import './pages/home.js';
 import './components/navli.js';
 
 const globalProp = "version-1.2.3";
@@ -16,8 +16,8 @@ class App extends Router(LitElement) {
             // Using 'type' and 'day' variable.
             {
                 path: "/first",
-                component: "first-page",
-                import: () => import("./pages/first-page.js")
+                component: "page-first",
+                import: () => import("./pages/first.js")
             },
             // Fallback for all unmatched routes.  
             {
