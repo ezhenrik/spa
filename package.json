@@ -1,16 +1,21 @@
 {
-  "name": "Code",
+  "name": "papygreek-front",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
   },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2"
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "haunted": "^4.7.1",
-    "simple-wc-router": "^2.3.4"
-  }
+  "license": "ISC"
 }
