@@ -1,0 +1,36 @@
+.dataTable-wrapper.no-footer .dataTable-container {
+    border-bottom: none;
+}
+
+.dataTable-top {
+    padding:0;
+    margin-bottom:10px;
+    position:relative;
+} 
+
+.dataTable-bottom {
+    padding: 16px 10px 8px;
+}
+
+.dataTable-wrapper {
+    display:none;
+}
+
+.dataTable-info {
+    color:var(--blue-grey-600);
+    position:absolute;
+    bottom:0px;
+}
+
+.series-datatable td, .series-datatable th {
+    width:33%;
+}
+
+.dataTable-table > tbody > tr > td, .dataTable-table > tbody > tr > th, .dataTable-table > tfoot > tr > td, .dataTable-table > tfoot > tr > th, .dataTable-table > thead > tr > td, .dataTable-table > thead > tr > th {
+    padding: 5px 5px 5px 0;
+}
+
+.dataTables-empty {
+    text-align:left;
+}
+/*# sourceMappingURL=index.5cb0b7d7.css.map */

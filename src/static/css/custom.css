@@ -1,0 +1,33 @@
+#logo {
+    width:89%;
+}
+
+#brand {
+    margin-right:50px;
+    font-size:20px;
+    color:var(--deep-orange-900);
+}
+
+a[login-link] {
+    float: right;
+}
+
+@keyframes spinner {
+    to {transform: rotate(360deg);}
+}
+
+.spinner {
+    position:relative;
+}
+
+.spinner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px dashed var(--blue-grey);
+    animation: spinner 1s linear infinite;
+}

@@ -3,16 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Single Page App</title>
-    <link rel="stylesheet" href="./static/css/index.css">
+    <title>PapyGreek</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+    <script src="./static/js/datatable-plugins.js"></script>
+
+    <link rel="stylesheet" href="./static/css/variables.css">
+    <link rel="stylesheet" href="./static/css/layout.css">
+    <link rel="stylesheet" href="./static/css/text.css">
+    <link rel="stylesheet" href="./static/css/utilities.css">
+    <link rel="stylesheet" href="./static/css/forms.css">
+    <link rel="stylesheet" href="./static/css/tables.css">
+    <link rel="stylesheet" href="./static/css/custom.css">
 </head>
 <body>
-    <nav class="nav">
-        <a href="/" class="nav__link" data-link>Dashboard</a>
-        <a href="/posts" class="nav__link" data-link>Posts</a>
-        <a href="/settings" class="nav__link" data-link>Settings</a>
-    </nav>
-    <div id="app"></div>
+    <header>
+        <nav class="main-nav">
+            <a id="brand" href="/" data-link>PapyGreek 2.0</a>
+            <a href="/series" data-link>Series</a>
+            <a href="/texts" data-link>Texts</a>
+            <a href="/chapters" data-link>Chapters</a>
+            <a href="/queries" data-link>Queries</a>
+            <a href="#" id="signin" login-link hidden>Login</a>
+            <a href="/account" id="signedin" data-link hidden login-link>Account</a>
+        </nav>
+    </header>
+    <main class="grid spinner">
+    </main>
+    <footer>Produced <script>document.write(new Date().getFullYear())</script> by the PapyGreek <a href="https://www2.helsinki.fi/en/researchgroups/digital-grammar-of-greek-documentary-papyri/people" target="_blank">team</a></footer>
     <script type="module" src="./static/js/index.js"></script>
 </body>
 </html>

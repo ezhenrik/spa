@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PapyGreek</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
-    <script src="https://apis.google.com/js/platform.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
-    <script src="/index.a7a8b33c.js"></script>
-
-    <link rel="stylesheet" href="/index.ff22c96c.css">
-    <link rel="stylesheet" href="/index.a7145887.css">
-    <link rel="stylesheet" href="/index.41e8c295.css">
-    <link rel="stylesheet" href="/index.00d0448c.css">
-    <link rel="stylesheet" href="/index.7b324207.css">
-    <link rel="stylesheet" href="/index.a68390f2.css">
-    <link rel="stylesheet" href="/index.3590f0ab.css">
-</head>
-<body>
-    <header>
-        <nav class="main-nav">
-            <a id="brand" href="/" data-link="">PapyGreek 2.0</a>
-            <a href="/series" data-link="">Series</a>
-            <a href="/texts" data-link="">Texts</a>
-            <a href="/chapters" data-link="">Chapters</a>
-            <a href="/queries" data-link="">Queries</a>
-            <a href="#" id="signin" login-link="" hidden="">Login</a>
-            <a href="/account" id="signedin" data-link="" hidden="" login-link="">Account</a>
-        </nav>
-    </header>
-    <main class="grid spinner">
-    </main>
-    <footer>Produced <script>// modules are defined as an array
+// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -174,12 +140,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"6c6FY":[function(require,module,exports) {
+})({"5c2FX":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "1e0d42493b93605c3f782d5b66052145";
+module.bundle.HMR_BUNDLE_ID = "2c119695639e8798361c98fca7a8b33c";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -475,11 +441,49 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"2KPFs":[function(require,module,exports) {
-document.write(new Date().getFullYear())
-},{}]},["6c6FY","2KPFs"], "2KPFs", "parcelRequiref5fb")
+},{}],"ma2b3":[function(require,module,exports) {
+simpleDatatables.DataTable.extend("u", function(options) {
+    let instance = this;
+    let wrapper = instance.wrapper.classList
+    let container = instance.container.classList
+    let table = instance.table.classList
+    let bottom = instance.wrapper.querySelector(".dataTable-bottom").classList
+    let init = document.querySelector("#dataTableEmpty").classList
+    let info = document.querySelector(".dataTable-info").classList
+    
+    let u = function() {};
+    u.prototype.init = function() {};
+    u.prototype.clear = function() {
+        instance.clear()
+        instance.data = []
+        wrapper.add('d-block-important', 'spinner')
+        container.add('shade')
+        bottom.add('d-none')
+        init.add('d-none')
+        info.add('d-none')
+    };
+    u.prototype.noFacets = function() {
+        init.remove('d-none')
+        wrapper.remove('d-block-important', 'spinner')
+        container.remove('shade')
+    }
+    u.prototype.refresh = function(data) {
+        if (data.length > 0) {
+            instance.insert({data:data})
+        } else { 
+            instance.insert({data:[[]]})
+            instance.rows().remove(0)
+        }
+        table.remove('d-none')
+        container.remove('shade')
+        wrapper.remove('spinner')
+        wrapper.add('d-block-important')
+        bottom.remove('d-none')
+        init.add('d-none')
+        info.remove('d-none')
+    }
+    return new u;
+})
+},{}]},["5c2FX","ma2b3"], "ma2b3", "parcelRequiref5fb")
 
-</script> by the PapyGreek <a href="https://www2.helsinki.fi/en/researchgroups/digital-grammar-of-greek-documentary-papyri/people" target="_blank">team</a></footer>
-    <script type="module" src="/index.c03c154e.js"></script>
-</body>
-</html>
+//# sourceMappingURL=index.a7a8b33c.js.map

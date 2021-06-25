@@ -5,9 +5,11 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel serve ./src/index.html",
+    "start-ssl": "parcel serve ./src/index.html --https",
     "build": "parcel build ./src/index.html"
   },
   "devDependencies": {
+    "@parcel/transformer-image": "^2.0.0-beta.2",
     "parcel": "^2.0.0-beta.2"
   },
   "browserslist": [
@@ -17,5 +19,9 @@
   ],
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@octokit/rest": "^18.5.2",
+    "js-base64": "^3.6.0"
+  }
 }

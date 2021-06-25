@@ -1,0 +1,24 @@
+.text-center {
+    text-align:center;
+}
+
+.d-none {
+    display:none;
+}
+
+.v-hidden {
+    visibility:hidden;
+}
+
+.shade {
+    opacity:25%;
+}
+
+.d-block-important {
+    display:block!important;
+}
+
+a[login-link] {
+    float: right;
+}
+/*# sourceMappingURL=index.29f6ca1a.css.map */
